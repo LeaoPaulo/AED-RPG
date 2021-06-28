@@ -787,44 +787,44 @@ int main(void)
         }
         if (vidaB >= 1)
         {
-            printf("Turno do player 1\n");
+            printf("Turno do player 2\n");
             printf("Selecione o que voce quer fazer:\n");
             printf("\t|1 - Atacar|\n\t|2 - Usar Magia|\n\t|3 - Melhorar a Arma|\n\t|4 - Fugir|\n");
-            scanf("%d", &acaoB);
+            scanf("%d", &acao);
 
-            switch (acaoB)
+            switch (acao)
             {
             case 1:
                 switch (armaB)
                 {
                 case 1:
-                    danoB = rand() % 200 + 100;
+                    dano = rand() % 200 + 100;
                     break;
                 case 2:
-                    danoB = rand() % 200 + 220;
+                    dano = rand() % 200 + 220;
                     break;
                 case 3:
-                    danoB = rand() % 200 + 300;
+                    dano = rand() % 200 + 300;
                     break;
                 case 4:
-                    danoB = rand() % 200 + 180;
+                    dano = rand() % 200 + 180;
                     break;
                 case 5:
-                    danoB = rand() % 150 + 50;
+                    dano = rand() % 150 + 50;
                     break;
                 case 6:
-                    danoB = rand() % 200 + 220;
+                    dano = rand() % 200 + 220;
                     break;
                 case 7:
-                    danoB = rand() % 200 + 200;
+                    dano = rand() % 200 + 200;
                     break;
                 case 8:
-                    danoB = rand() % 400 + 500;
+                    dano = rand() % 400 + 500;
                     break;
                 }
-                danoB = danoB / 100;
-                danoB = (danoB * 100) + (danoB * forcaB);
-                vida = vida - danoB;
+                dano = dano / 100;
+                dano = (dano * 100) + (dano * forcaB);
+                vida = vida - dano;
                 printf("Ainda resta %d de vida para o inimigo", vida);
                 getch();
                 break;
